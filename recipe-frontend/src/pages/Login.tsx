@@ -23,7 +23,7 @@ const Login = () => {
       });
 
       login(res.data.token, res.data.role);
-      navigate("/home");
+      navigate("/dashboard");
     } catch (err) {
       setError("Invalid credentials.");
     }
