@@ -7,19 +7,19 @@ const DashboardLayout = () => {
       <aside className="w-64 bg-white shadow p-6 space-y-4">
         <h2 className="text-xl font-bold text-gray-800 mb-6">Dashboard</h2>
         <NavLink
-          to="/dashboard/home"
+          to="/home"
           className="block py-2 px-3 rounded hover:bg-blue-100 text-gray-700 font-medium"
         >
           🏠 Home
         </NavLink>
         <NavLink
-          to="/dashboard/add-recipe"
+          to="/create"
           className="block py-2 px-3 rounded hover:bg-blue-100 text-gray-700 font-medium"
         >
           🍳 Add Recipe
         </NavLink>
         <NavLink
-          to="/dashboard/users"
+          to="/users"
           className="block py-2 px-3 rounded hover:bg-blue-100 text-gray-700 font-medium"
         >
           👥 Manage Users
