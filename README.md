@@ -26,18 +26,17 @@ A full-stack web application built with **ASP.NET Core (C#)** and **React (TypeS
 - Only Admins can:
   - Create new users
   - Delete users
-  - Access admin-specific operations (planned)
+  - Access admin dashboard
 
 ### 🧪 API Testing
 - All backend endpoints are fully testable via the built-in Swagger UI
-- Backend functionality is complete and tested
+- Backend and authentication functionality is complete and tested
 
-### 🛠️ Still in Progress
-- Frontend for login and admin dashboard is not yet implemented
-- Planned functionality:
-  - Admin-only dashboard
-  - User management UI
-  - Protected routes and role-based access in frontend
+### 🔑 Admin Credentials
+Use the following credentials to log in as an admin:
+Username: admin
+Password: Admin123!
+
 
 ## 🧠 AI Recipe Suggestion
 Includes an AI helper to suggest recipes based on context or preferences (available in the backend logic).
@@ -64,7 +63,7 @@ Includes an AI helper to suggest recipes based on context or preferences (availa
 
 ## 🙋 About the Developer
 
-This project was built as part of a technical assessment. While the core functionality is complete, some frontend features are pending due to time limitations.
+This project was built as part of a technical assessment. It includes all core features like authentication, role-based access, and CRUD operations. The frontend and backend are fully integrated and tested.
 
 Feel free to test the backend functionality via Swagger. If you'd like to see more or request access, please contact me.
 
