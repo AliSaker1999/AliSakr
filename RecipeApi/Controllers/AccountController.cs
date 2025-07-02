@@ -67,5 +67,25 @@ namespace RecipeApi.Controllers
             await _userManager.AddToRoleAsync(user, "User");
             return Ok("User registered successfully.");
         }
+        [HttpDelete("{username}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult> DeleteUser(string username)
+        {
+            var user = await _userManager.FindByNameAsync(username);
+            if (user == null) return NotFound("User not found.");
+
+            var result = await _userManager.DeleteAsync(user);
+            if (!result.Succeeded) return BadRequest(result.Errors);
+
+            return Ok("User deleted successfully.");
+        }
+        [HttpGet("all")]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult<IEnumerable<string>>> GetAllUsers()
+        {
+            var users = await _userManager.Users.Select(u => u.UserName).ToListAsync();
+            return Ok(users);
+        }
+
     }
 }
