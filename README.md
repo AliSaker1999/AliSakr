@@ -50,9 +50,9 @@ Includes an AI helper to suggest recipes based on context or preferences (availa
 
 ### Backend
 1. Open the solution in Visual Studio or VS Code
-2. Make sure SQL Server is running
-3. Update your `appsettings.json` with your SQL connection string
-4. Run the project – Swagger UI will open for testing
+2. navigate to the api folder
+3. Tap dotnet watch run in the terminal 
+4. the project – Swagger UI will open for testing
 
 ### Frontend
 1. Navigate to `frontend` folder
