@@ -23,3 +23,7 @@ export const searchRecipes = async (query: string): Promise<Recipe[]> => {
   const response = await axios.get(`${API_URL}/search?query=${query}`);
   return response.data;
 };
+export const askAi = async (question: string): Promise<string> => {
+  const response = await axios.post("http://localhost:5196/api/recipes/ask-ai", { question });
+  return response.data.answer;
+};

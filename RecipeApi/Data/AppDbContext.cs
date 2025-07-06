@@ -21,5 +21,10 @@ namespace RecipeApi.Data
                     v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).ToList()
                 );
         }
+
+        internal async Task SaveChangesAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

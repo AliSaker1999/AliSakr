@@ -10,7 +10,7 @@ import {
 const Home = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [suggestedRecipe, setSuggestedRecipe] = useState<Recipe | null>(null);
+
 
   const fetchRecipes = async () => {
     const data = await getAllRecipes();
@@ -32,11 +32,6 @@ const Home = () => {
     setRecipes(results);
   };
 
-  const handleSuggest = () => {
-    if (recipes.length === 0) return;
-    const random = recipes[Math.floor(Math.random() * recipes.length)];
-    setSuggestedRecipe(random);
-  };
 
   useEffect(() => {
     fetchRecipes();
@@ -47,12 +42,7 @@ const Home = () => {
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-6">
           <h1 className="text-4xl font-bold text-gray-800">🍽️ All Recipes</h1>
-          <a
-            href="/create"
-            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-          >
-            + New Recipe
-          </a>
+          
         </div>
 
         {/* Search + Suggest */}
@@ -70,19 +60,12 @@ const Home = () => {
           >
             Search
           </button>
-          <button
-            type="button"
-            onClick={handleSuggest}
-            className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
-          >
-            🎲 Suggest One
-          </button>
+          
           <button
             type="button"
             onClick={() => {
               setSearchQuery("");
               fetchRecipes();
-              setSuggestedRecipe(null);
             }}
             className="text-sm text-gray-600 hover:underline"
           >
@@ -90,13 +73,9 @@ const Home = () => {
           </button>
         </form>
 
-        {/* Suggested Recipe */}
-        {suggestedRecipe && (
-          <div className="mb-6 p-4 bg-yellow-100 border border-yellow-400 rounded-lg shadow">
-            <h2 className="text-xl font-bold mb-1">🔮 Suggested Recipe:</h2>
-            <p className="font-semibold text-indigo-700">{suggestedRecipe.name}</p>
-          </div>
-        )}
+       
+        
+       
 
         {/* Recipe Grid */}
         <div className="grid gap-6 md:grid-cols-2">
