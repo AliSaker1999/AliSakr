@@ -95,8 +95,29 @@ To test admin features, use:
 
 ## 🧠 AI Integration
 
-* Uses **free AI APIs** (Groq, OpenRouter, etc.), so no paid key is required
-* The AI always uses your live recipe data for accurate answers
+* Uses **free AI APIs** from [Groq](https://console.groq.com/keys).
+* The AI always uses your live recipe data for accurate answers.
+
+### **Get Your Free Groq API Key**
+
+To enable the AI Assistant features, you need a **free API key**:
+
+1. Go to [https://console.groq.com/keys](https://console.groq.com/keys) and sign up (or log in).
+
+2. Create a new API key (it’s instant and free).
+
+3. **Copy your API key.**
+
+4. In your backend project, open `appsettings.json` and **add your key** in the `Groq` section:
+
+   ```json
+   "Groq": {
+     "ApiKey": "your_api_key_here"
+   }
+   ```
+
+5. **Save the file and restart your backend.**
+   That’s it! The AI Assistant is now ready to use.
 
 ---
 
@@ -104,7 +125,3 @@ To test admin features, use:
 
 Built for a technical assessment and as a portfolio project, this app demonstrates full-stack skills, secure authentication, modern dashboard UI, and advanced AI integration.
 Test all features freely. For questions, improvements, or access, please contact me.
-
----
-
-Let me know if you want it more detailed or want to add sections (e.g., environment setup, screenshots, contribution guide, etc)!
